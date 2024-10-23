@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/assets/imges/icons/boyo-logo.svg">
+  <link rel="icon" href="%PUBLIC_URL%/assets/imges/icons/boyo-logo.svg" type="image/svg+xml">
+
+  <!-- Bootstrap-css -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/fontawesome/css/all.min.css">
+
+  <!-- Slick-css -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/slick.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/slick-theme.css">
+
+  <!-- Custom Icon and Style CSS -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/custom-icon/style.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/style.css">
+
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/responsive.css">
+
+  <title>Boyo Real Estate</title>
+
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhuJrjhS1JNrk61fisAcb1_-rCN1QXPeI&libraries=places&callback=initMap"></script>
+  <script>
+    function initMap() {
+      if (window.dispatchEvent) {
+        window.dispatchEvent(new Event('googleMapsScriptLoaded'));
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="%PUBLIC_URL%/assets/js/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap Bundle JS -->
+  <script src="%PUBLIC_URL%/assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Slick JS -->
+  <script src="%PUBLIC_URL%/assets/js/slick.min.js"></script>
+  <!-- Custom JS -->
+  <script src="%PUBLIC_URL%/assets/js/custom.js"></script>
+
+  <!-- Min - Max Price Slider Script -->
+  <script>
+    const rangeInput = document.querySelectorAll(".range-input input"),
+      priceInput = document.querySelectorAll(".price-input input"),
+      range = document.querySelector(".slider .progress");
+    let priceGap = 1000;
+
+    priceInput.forEach((input) => {
+      input.addEventListener("input", (e) => {
+        let minPrice = parseInt(priceInput[0].value) || 0,
+          maxPrice = parseInt(priceInput[1].value) || 0;
+
+        if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+          if (e.target.className === "input-min") {
+            rangeInput[0].value = minPrice;
+            range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+          } else {
+            rangeInput[1].value = maxPrice;
+            range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+          }
+        }
+      });
+    });
+
+    rangeInput.forEach((input) => {
+      input.addEventListener("input", (e) => {
+        let minVal = parseInt(rangeInput[0].value) || 0,
+          maxVal = parseInt(rangeInput[1].value) || 0;
+
+        if (maxVal - minVal < priceGap) {
+          if (e.target.className === "range-min") {
+            rangeInput[0].value = maxVal - priceGap;
+          } else {
+            rangeInput[1].value = minVal + priceGap;
+          }
+        } else {
+          priceInput[0].value = minVal;
+          priceInput[1].value = maxVal;
+          range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+          range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+.input_fild1 label,
+.forgot_btn {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  color: #202020;
+  margin-bottom: 12px;
+}
+
+.input_fild1 .form-control {
+  border: 1px solid #71859e4d;
+  padding: 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  background-color: white !important;
+}
+
+.input_fild1 input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  color: #71859e;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: #000; /* Adjust the color as needed */
+  height: 100%;
+  margin-right: 10px; /* Adjust the margin as needed */
+}

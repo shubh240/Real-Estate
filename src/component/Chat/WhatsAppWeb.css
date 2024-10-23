@@ -1,0 +1,42 @@
+.whatsapp-web-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #EDEDED;
+    text-align: center;
+}
+
+.whatsapp-web-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-web-image img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.whatsapp-web-text h1 {
+    font-size: 24px;
+    color: #5D5D5D;
+}
+
+.whatsapp-web-text p {
+    font-size: 16px;
+    color: #5D5D5D;
+}
+
+.whatsapp-web-footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #5D5D5D;
+}
