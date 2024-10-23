@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Company List</title>
+        <link rel="stylesheet" type="text/css" href="<%=
+            GLOBALS.BASE_URL_WITHOUT_API%>/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="<%=
+            GLOBALS.BASE_URL_WITHOUT_API+GLOBALS.LOGO %>">
+
+        <style type="text/css">
+            body {
+                font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+                padding: 10px;
+            }
+
+            .header-title {
+                padding: 5px;
+                border-bottom: solid 1px;
+                background-color: #8a8a8a69;
+                color: #fff;
+            }
+
+            th {
+                padding: 5px;
+                border-bottom: solid 1px;
+                background-color: #ebeff2;
+            }
+
+            td {
+                border-right: solid 1px;
+                padding-bottom: 10px;
+                padding-left: 5px;
+                padding-top: 10px;
+            }
+
+            table {
+                border-left: solid 2px black;
+            }
+
+            tr {
+                transition-duration: .5s;
+                border-bottom: 1px solid #bababa;
+            }
+
+            tr:hover {
+                box-shadow: 0px 0px 5px rgb(0, 0, 0);
+                color: #000000;
+                background: rgb(0, 0, 0, 0.0048);
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.034) 0%, rgba(0, 0, 0, 0.205) 100%);
+            }
+        </style>
+    </head>
+
+    <body>
+        <table id="myTable" border="1" class="table">
+            <thead>
+                <tr style="background: rgb(0,0,0);
+                    background: linear-gradient(0deg,
+                    rgba(0,0,0,0.87718837535014) 0%, rgba(0,0,0,1) 100%);">
+                    <td colspan="20" align="center" style="font-size:
+                        25px;color: white;"><b>Company List</b></td>
+                </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Token</th>
+                    <th>Device Type</th>
+                    <th>User Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Country Code</th>
+                    <th>Mobile Number</th>
+                    <th>DOB</th>
+                    <th>Referal Code</th>
+                    <th>Points</th>
+                    <th>Levels</th>
+                    <th>Last Login</th>
+                    <th>Device Token</th>
+                    <th>Online/Offline</th>
+                    <th>Insert Datetime</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(data !=null ) { for (var i=0; i <data.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= data[i].id %>
+                        </td>
+                        <td>
+                            <%= data[i].token %>
+                        </td>
+                        <td>
+                            <%= data[i].device_type %>
+                        </td>
+                        <td>
+                            <%= data[i].user_name %>
+                        </td>
+                        <td>
+                            <%= data[i].first_name %>
+                        </td>
+                        <td>
+                            <%= data[i].last_name %>
+                        </td>
+                        <td>
+                            <%= data[i].email %>
+                        </td>
+                        <td>
+                            <%= data[i].password %>
+                        </td>
+                        <td>
+                            <%= data[i].country_code %>
+                        </td>
+                        <td>
+                            <%= data[i].mobile_number %>
+                        </td>
+                        <td>
+                            <%= data[i].dob %>
+                        </td>
+                        <td>
+                            <%= data[i].referal_code %>
+                        </td>
+                        <td>
+                            <%= data[i].points %>
+                        </td>
+                        <td>
+                            <%= data[i].level %>
+                        </td>
+                        <td>
+                            <%= data[i].last_login %>
+                        </td>
+                        <td>
+                            <%= data[i].device_token %>
+                        </td>
+                        <td>
+                            <%= data[i].is_online==1?" Online":" Offline" %>
+                        </td>
+                        <td>
+                            <%= data[i].inserted_at %>
+                        </td>
+                    </tr>
+                    <% } }%>
+            </tbody>
+        </table>
+    </body>
+
+</html>

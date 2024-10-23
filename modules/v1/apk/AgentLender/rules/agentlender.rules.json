@@ -1,0 +1,26 @@
+{
+    "signup": {
+        "agent_name": "required",
+        "email": "required|email",
+        "country_code_id": "required",
+        "mobile_number": "required",
+        "address": "required|string",
+        "latitude" : "required",
+        "longitude" : "required",
+        "profile_image" : "required",
+        "id_card" : "required",
+        "license" : "required"
+    },
+    "lendersignup": {
+        "lender_name": "required",
+        "email": "required|email",
+        "country_code_id": "required",
+        "mobile_number": "required",
+        "address": "required|string",
+        "latitude" : "required",
+        "longitude" : "required",
+        "profile_image" : "required",
+        "id_card" : "required",
+        "license" : "required"
+    }
+}

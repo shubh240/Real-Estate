@@ -1,0 +1,17 @@
+{
+    "add-subscription" : {
+        "plan_name" : "required",
+        "plan_description" : "required",
+        "premium_features" : "required",
+        "duration" : "required",
+        "price" : "required"
+    },
+    "edit-subscription" : {
+        "subscription_id" : "required",
+        "plan_name" : "required",
+        "plan_description" : "required",
+        "premium_features" : "required",
+        "duration" : "required",
+        "price" : "required"
+    }
+}

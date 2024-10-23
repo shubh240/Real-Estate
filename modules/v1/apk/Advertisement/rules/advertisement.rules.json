@@ -1,0 +1,21 @@
+{
+    "add-advertise" : {
+        "property_id" : "required" , 
+        "option" : "required",
+        "start_date" : "required",
+        "end_date" : "required"
+    },
+    "edit-advertise" : {
+        "property_id" : "required" , 
+        "advertise_id" : "required"
+    },
+    "estimation_price" : {
+        "listing_type" : "required" ,
+        "day_diff" : "required"
+    },
+    "add-payment" : {
+        "currency" : "required",
+        "total_amount" : "required",
+        "return_url" : "required"
+    }
+}

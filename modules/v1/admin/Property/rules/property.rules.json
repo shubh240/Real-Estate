@@ -1,0 +1,44 @@
+{
+    "add-category": {
+        "image": "required",
+        "name": "required",
+        "about": "required"
+    },
+    "edit-category": {
+        "image": "required",
+        "name": "required",
+        "about": "required"
+    },
+    "delete-category": {
+        "category_id": "required"
+    },
+    "add-property_type": {
+        "category_id": "required",
+        "property_type": "required",
+        "property_type_image": "required"
+    },
+    "edit-property_type": {
+        "property_type": "required",
+        "property_type_image": "required"
+    },
+    "delete-property_type": {
+        "properties_type_id": "required"
+    },
+    "add-attribute_type": {
+        "attribute_icon": "required",
+        "attribute_type": "required"
+    },
+    "edit-attribute_type": {
+        "attribute_icon": "required",
+        "attribute_type": "required"
+    },
+    "add-amenity_category": {
+        "amenity_category": "required",
+        "amenity_category_icon": "required"
+    },
+    "add-amenity": {
+        "category_id": "required",
+        "amenity_name": "required",
+        "amenity_icon": "required"
+    }
+}

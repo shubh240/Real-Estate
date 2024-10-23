@@ -1,0 +1,16 @@
+{
+    "add-advertise" : {
+        "property_id" : "required" , 
+        "option" : "required",
+        "address" : "required",
+        "latitude" : "required",
+        "longitude" : "required",
+        "ad_image" : "required",
+        "start_date" : "required",
+        "end_date" : "required"
+    },
+    "estimation_price" : {
+        "listing_type" : "required" ,
+        "day_diff" : "required"
+    }
+}

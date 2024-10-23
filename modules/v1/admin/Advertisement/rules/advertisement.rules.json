@@ -1,0 +1,8 @@
+{
+    "add-advertise" : {
+        "advertise_image" : "required"
+    },
+    "edit-advertise" : {
+        "status" : "required"
+    }
+}

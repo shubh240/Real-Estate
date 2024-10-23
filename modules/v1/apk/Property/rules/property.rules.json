@@ -1,0 +1,122 @@
+{
+    "add-property": {
+        "property_name": "required|string",
+        "address": "required",
+        "latitude": "required",
+        "longitude": "required",
+        "status" : "required",
+        "category_id" : "required",
+        "property_type_id" : "required",
+        "property_price" : "required",
+        "about" : "required"
+    },
+    "edit-property": {
+        "property_name": "required|string",
+        "address": "required",
+        "latitude": "required",
+        "longitude": "required",
+        "status" : "required",
+        "category_id" : "required",
+        "property_type_id" : "required",
+        "property_price" : "required",
+        "about" : "required"
+    },
+    "property-details": {
+        "property_id": "required"
+    },
+    "property-fav": {
+        "property_id": "required"
+    },
+    "complete-profile": {
+        "first_name": "required|string",
+        "last_name": "required|string",
+        "email": "required|email",
+        "dob": "required|string",
+        "address": "required|string"
+    },
+    "edit-profile": {
+        "profile_image" : "required",
+        "first_name": "required|string",
+        "last_name": "required|string",
+        "email": "required|email",
+        "country_code_id": "required",
+        "mobile_number": "required",
+        "dob": "required|string",
+        "address": "required|string"
+    },
+    "edit-profilebyotp": {
+        "user_id" : "required|string",
+        "otp": "required|string|min:4|max:4",
+        "profile_image" : "",
+        "first_name": "string",
+        "last_name": "string",
+        "email": "email",
+        "country_code_id": "",
+        "mobile_number": "required",
+        "dob": "string",
+        "address": "string"
+    },
+    "upload_document": {
+        "role": "required|in:company",
+        "license": "required|string",
+        "id_proof": "required|string",
+        "device_type": "required|in:A,I,W|string",
+        "device_token": "required|string"
+    },
+    "add_organization": {
+        "role": "required|in:company",
+        "organization_name": "required|string",
+        "organization_site": "required|string",
+        "organization_location": "required|string",
+        "device_type": "required|in:A,I,W|string",
+        "device_token": "required|string"
+    },
+    "login": {
+        "role": "required|in:company,employee,client",
+        "email": "required|string|email",
+        "device_type": "required|in:A,I,W|string",
+        "device_token": "required|string"
+    },
+    "forgot_password": {
+        "country_code_id": "required",
+        "mobile_number": "required"
+    },
+    "forgot_otp_verify": {
+        "country_code_id": "required",
+        "mobile_number": "required",
+        "user_id": "required|string",
+        "otp": "required|string|min:4|max:4"
+    },
+    "reset_password": {
+        "user_id": "required|string",
+        "new_password": "required|string",
+        "confirm_password": "required|string"
+    },
+    "change_password": {
+        "old_password": "required|string",
+        "new_password": "required|string",
+        "confirm_password": "required|string"
+    },
+    "resend_otp": {
+        "country_code_id": "required",
+        "mobile_number": "required"
+    },
+    "verify_otp": {
+        "user_id": "required|string",
+        "otp": "required|string|min:4|max:4",
+        "device_type": "required|in:A,I,W|string",
+        "device_token": "required|string"
+    },
+    "contact_us": {
+        "subject": "required|string",
+        "email": "required|email",
+        "description": "required|string|max:2000"
+    },
+    "update_device_info": {
+        "device_type": "required|in:A,I,W|string",
+        "device_token": "required|string"
+    },
+    "send-notification" : {
+        "receiver_id": "required"
+    }
+}

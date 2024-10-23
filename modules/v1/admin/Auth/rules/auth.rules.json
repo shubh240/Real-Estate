@@ -1,0 +1,23 @@
+{
+    "login": {
+        "email": "required|string|email",
+        "password": "required|string"
+    },
+    "change_password": {
+        "old_password": "required|string",
+        "new_password": "required|string",
+        "confirm_password": "required|string"
+    },
+    "edit_profile": {
+        "profile_image": "required",
+        "full_name": "required|string",
+        "email": "required|string"
+    },
+    "forgot_password": {
+        "email": "required|string"
+    },
+    "mfaCode": {
+        "token": "required",
+        "secret": "required"
+    }
+}
